@@ -6,13 +6,13 @@ const { isLoggedIn } = require("../middleware/auth");
 router.post("/category/create", isLoggedIn,async (req, res, next) => {
   const status = 201;
   try {
-    const { type, category, subCategory } = req.body;
-    if(type && category && subCategory){    
+    const { type, category, subcategory } = req.body;
+    if(type && category && subcategory){    
     //create a user record
     await Category.create({
       type: req.body.type,
       category: req.body.category,
-      subcategory: req.body.subCategory,
+      subcategory: req.body.subcategory,
       is_active: true
     });
     const response = "Successfully created!";

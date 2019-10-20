@@ -18,11 +18,11 @@ router.post("/signup", async (req, res, next) => {
       return next(error);
     }
     //check password criteria
-    if (req.body.password.length < 8) {
-      const error = new Error(`Password must be atleast 8 characters long`);
-      error.status = 400;
-      return next(error);
-    }
+    // if (req.body.password.length < 8) {
+    //   const error = new Error(`Password must be atleast 8 characters long`);
+    //   error.status = 400;
+    //   return next(error);
+    // }
     //create a user record
     const user = await User.create({
       first_name: req.body.first_name,

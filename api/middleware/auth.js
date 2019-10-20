@@ -31,4 +31,4 @@ const isAdmin = async (req, next) => {
   }
 };
 
-module.exports = { isLoggedIn, isSameUser, isAdmin, getStudentId };
+module.exports = { isLoggedIn, isAdmin };
